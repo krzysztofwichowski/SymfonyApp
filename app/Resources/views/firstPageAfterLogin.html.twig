@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% include('navbar.html.twig') %}
+    {% include('flash-messages.html.twig') %}
+    <div class="container" style="text-align: center">
+        <h2>You have spent</h2>
+            <h1 style="color: red">{{sum}}</h1>
+        <h2>for alcohol</h2>
+        <br>
+        <h4>Well, are You proud of yourself?</h4>
+    </div>
+
+{% endblock %}

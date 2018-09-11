@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {% include('navbar.html.twig') %}
+    <div class="form-signin">
+        <h3 class="h3 mb-3 font-weight-normal">Update existing consumption</h3>
+        {{ form_start(edit_consumption_form) }}
+        {{ form_widget(edit_consumption_form) }}
+        {{ form_end(edit_consumption_form) }}
+    </div>
+{% endblock %}

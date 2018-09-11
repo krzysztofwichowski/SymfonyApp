@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {% include('navbar.html.twig') %}
+    <div class="form-signin">
+        <h3 class="h3 mb-3 font-weight-normal">Edit existing alcohol</h3>
+        {{ form_start(edit_alcohol_form) }}
+        {{ form_widget(edit_alcohol_form) }}
+        {{ form_end(edit_alcohol_form) }}
+    </div>
+{% endblock %}

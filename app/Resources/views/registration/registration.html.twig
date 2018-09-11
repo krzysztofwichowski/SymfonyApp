@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <p><a href="{{ path('homepage') }}">Back to homepage</a></p>
+    <h1 class="h3 mb-3 font-weight-normal">Registration form</h1>
+
+    {{ form(registration_form)}}
+{% endblock %}
+{% block javascripts %}
+    <script>
+    </script>
+{% endblock %}

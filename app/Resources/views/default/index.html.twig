@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="start_page">
+        <h1>Welcome in ALCO</h1>
+        <p class="lead text-muted">It is a simple application to manage alcohol-related expenses.
+            You can see how much money you spend for alcohol. Try it by yourself!</p>
+        <p>
+            <a href="{{ path('login') }}" class="btn btn-primary my-2">Login</a>
+            <a href="{{ path('registration') }}" class="btn btn-secondary my-2">Register</a>
+        </p>
+    </div>
+{% endblock %}
+
+

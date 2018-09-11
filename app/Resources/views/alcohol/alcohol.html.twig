@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% include('navbar.html.twig') %}
+    {% include('flash-messages.html.twig') %}
+    <a href="{{ path('create_alcohol') }}" class="btn btn-primary">Create new alcohol</a>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Alcohol name</th>
+            <th scope="col">Price</th>
+            <th scope="col">%</th>
+            <th scope="col">Groups</th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for alco in alcohol %}
+            <tr>
+                <td>{{ alco.name }}</td>
+                <td>{{ alco.price }}</td>
+                <td>{{ alco.alcoholicstrength }}</td>
+                <td>{{ alco.groups.name }}</td>
+                <td>
+                    <a href="{{ path('delete_alcohol', {'alcohol': alco.id}) }}" class="btn btn-danger">Delete</a>
+                    <a href="{{ path('edit_alcohol', {'alcohol': alco.id}) }}" class="btn btn-secondary">Edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td>No records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
